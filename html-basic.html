@@ -11,7 +11,9 @@
     <h3>Lorem, ipsum dolor.</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing eolt. Quo, sint aut. Blanditiis eveniet labore quis tempore rem faciols, veritatis laboriosam aolquid quasi corporis quam nobis pariatur ab fugiat. Harum, architecto.</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing eolt. Deserunt fuga maxime vel quam itaque faciols dolor molestiae tempora culpa, omnis reiciendis ut aolquid eius sunt excepturi quod delectus laudantium. Voluptates.</p>
-    <a target="_blank" href="https://www.jd.com/">在新窗口打开京东</a> <a href="222@qq.com">点我发邮件</a> <a href="#foot">跳到页面底部</a> <a href="file:///D:/web/%E6%95%99%E5%AD%A6/FOO.js" download="aaa">点我下载文件</a><br><img src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" width="200" height="200">
+    <a target="_blank" href="https://www.jd.com/">在新窗口打开京东</a> <a href="222@qq.com">点我发邮件</a> <a href="#foot">跳到页面底部</a> <a href="file:///D:/web/%E6%95%99%E5%AD%A6/FOO.js" download="aaa">点我下载文件</a>
+    <br>
+    <img src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" width="200" height="200">
     <hr>
     <hr>
     <marquee> 飘~~~ </marquee>
@@ -50,7 +52,7 @@
       <dt>班级</dt>
       <dd>三年二班</dd>
       <dt>老师</dt>
-      <dt>张老师</dt>
+      <dd>张老师</dd>
       <dd>李老师</dd>
       <dd>王老师</dd>
       <dt>学生</dt>
@@ -59,23 +61,73 @@
     </dl>
     <hr>
     <h3>Google搜索</h3>
-    <form>
-      <input type="text" title="请填写此字段">  <button type="submit">在新窗口打开搜索结果</button>
+    <form action="https://www.google.com.hk/search?" target="_blank">
+      <input type="hidden" name="ie" value="UTF-8">
+      <input type="text" name="q" title="请填写此字段">  <button>在新窗口打开搜索结果</button>
     </form>
+    <hr>
     <form>
       <p>个人信息调查表</p>
-      <P>
-        性别<br>
-        <input type="radio" name="sex" value="男">男 <input type="radio" name="sex" value="女">女<br>
-        年龄<br>
-        <select>
-          少年
-          <option value="1到6岁">1到6岁</option>
-        </select>
-      </P>
-
+      <dl>
+        <dt>性别</dt>
+        <dd><input type="radio" name="sex" value="男"> 男 <input type="radio" name="sex" value="女"> 女</dd>
+        <dt>年龄</dt>
+        <dd><select>
+          <option hidden selected>请选择</option>
+          <optgroup label="少年">
+            <option>1到6岁</option>
+            <option >6到12岁</option>
+          </optgroup>
+          <optgroup label="青年">
+            <option >13到15岁</option>
+            <option >16到18岁</option>
+          </optgroup>
+          <optgroup label="壮年">
+            <option >19到25岁</option>
+            <option >25到35岁</option>
+          </optgroup>
+        </dd></select>
+        <dt>生日</dt>
+        <dd><input type="date" name=birthday></dd>
+        <dt>生辰</dt>
+        <dd><input type="time" name=birthdaytime></dd>
+        <dt>照片</dt>
+        <dd><label><input type="file" hidden>点我上传照片，我比文件上传按钮好看</label></dd>
+        <dt>肤色</dt>
+        <dd><input type="color"></dd>
+        <dt>自我介绍</dt>
+        <dd><textarea rows=10 cols="32">&#60/textarea></textarea></dd>
+      </dl>
+      <fieldset disabled>
+        <legend>这里面的全都禁用了</legend>
+        <input><input><input><input>
+      </fieldset>
+      <button>提交</button>   <button type="reset">重置</button>
+      <hr>
     </form>
-
+    <table border="1" border-spacing=1>
+      <col><col bgcolor=red><col><col>
+      <thead>
+        <tr>
+          <th>编号</th><th>品名</th><th>进价</th><th>出价</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>aaa</td><td>aaa</td><td rowspan="2">5</td><td>aaa</td>
+        </tr>
+        <tr>
+          <td>aaa</td><td>aaa</td><td>8</td>
+        </tr>
+        <tr>
+          <td>aaa</td><td>aaa</td><td>aaa</td><td>aaa</td>
+        </tr>
+        <tr>
+          <td>aaa</td><td>aaa</td><td>aaa</td><td>aaa</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
 
     <p id="foot">>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< &#60span>&#60/span></p>
   </body>
