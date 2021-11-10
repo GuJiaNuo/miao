@@ -70,7 +70,8 @@
       <p>个人信息调查表</p>
       <dl>
         <dt>性别</dt>
-        <dd><input type="radio" name="sex" value="男"> 男 <input type="radio" name="sex" value="女"> 女</dd>
+        <dd><label><input type="radio" name="sex" value="男"> 男</label> <label><input type="radio" name="sex" value="女">
+            女</label></dd>
         <dt>年龄</dt>
         <dd><select>
           <option hidden selected>请选择</option>
@@ -100,7 +101,7 @@
       </dl>
       <fieldset disabled>
         <legend>这里面的全都禁用了</legend>
-        <input><input><input><input>
+        <input> <input> <input> <input>
       </fieldset>
       <button>提交</button>   <button type="reset">重置</button>
       <hr>
@@ -114,20 +115,46 @@
       </thead>
       <tbody>
         <tr>
-          <td>aaa</td><td>aaa</td><td rowspan="2">5</td><td>aaa</td>
+          <th>aaa</th>
+          <td>aaa</td>
+          <td rowspan="2">5</td>
+          <td>aaa</td>
         </tr>
         <tr>
-          <td>aaa</td><td>aaa</td><td>8</td>
+          <th>aaa</th>
+          <td>aaa</td>
+          <td>8</td>
         </tr>
         <tr>
-          <td>aaa</td><td>aaa</td><td>aaa</td><td>aaa</td>
+          <th>aaa</th>
+          <td>aaa</td>
+          <td>aaa</td>
+          <td>aaa</td>
         </tr>
         <tr>
-          <td>aaa</td><td>aaa</td><td>aaa</td><td>aaa</td>
+          <th>aaa</th>
+          <td>aaa</td>
+          <td>aaa</td>
+          <td>aaa</td>
         </tr>
       </tbody>
     </table>
     <hr>
+    <img src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" usemap="#mty"
+      width="300" height="450">
+    <map name=mty>
+      <area shape="rect" coords="55 110 210 200" href="">
+      <area shape="circle" coords="135 260 90" href="">
+    </map>
+    <hr>
+    <p>
+      <a href="https://www.mi.com/" target=xiaomi>小米</a> <br>
+      <iframe src="https://nodejs.org/zh-cn/" frameborder=1 name="xiaomi"></iframe>
+    </p>
+    <p>
+      aaa&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;bbbbb
+    </p>
+    <pre>aaa           bbbb</pre>
 
     <p id="foot">>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< &#60span>&#60/span></p>
   </body>
