@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>Document</title>
+  <style>
+    #top {
+      background-color: black;
+      color: white;
+      margin: -16px;
+      margin-bottom: auto;
+    }
+
+    #top p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+    }
+
+    #body {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #body div {
+      display: inline-block;
+      height: 40px;
+      width: 180px;
+      box-sizing: border-box;
+      background-color: #FFC0CB;
+      border: black 3px solid;
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 36px;
+    }
+
+    #body div:nth-child(3n+2) {
+      margin-left：25px;
+      margin-right: 25px;
+    }
+
+    #body div:nth-child(3n+3) {
+      margin-left：25px;
+      margin-right: 25px;
+    }
+
+    #body div:hover {
+      background-color: red;
+    }
+
+    #body :last-child {
+      margin: 0px;
+    }
+
+    .link {
+      border-bottom: dotted 1px black;
+      margin: 0;
+    }
+
+    #bottom {
+      background-color: #EE8AEE;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<boddy>
+  <div id=top>
+    <p>hello world 请调整浏览器窗口大小查看效果</p>
+  </div>
+  <div id=body>
+    <p>
+      页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px
+      页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px
+    </p>
+    <div>宽180高40(包含边框)</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>水平间隙30px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>垂直间隙15px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>边框宽度3px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <p class=link>
+      link
+    </p>
+    <p class=link>
+      link
+    </p>
+    <p class=link>
+      link
+    </p>
+    <p class=link>
+      link
+    </p>
+    <p>
+      link
+    </p>
+  </div>
+  <!-- <div id=bottom> -->
+  <p id=bottom>&copy;版权所有
+    <br>本页所有布局均使用块元素
+  </p>
+  <!-- </div> -->
+  </body>
+
+</html>
