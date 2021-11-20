@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complexspiral Redux</title>
+  <style>
+    body {
+      margin: 0;
+      background: url("https://meyerweb.com/eric/css/edge/complexspiral/glassy-bg.jpg") no-repeat fixed;
+    }
+
+    div {
+      margin: 80px 80px 160px 80px;
+      border: solid #996633 3px;
+      background: url(https://meyerweb.com/eric/css/edge/complexspiral/glassy-ripple.jpg) no-repeat fixed;
+      padding: 10px;
+      font: arial, sans-serif;
+    }
+
+    h1 {
+      margin: .5em -4px .5em;
+      background: #ccc url(https://meyerweb.com/eric/css/edge/complexspiral/glassy-gray.jpg) fixed no-repeat;
+      border: #808080 2px solid;
+      padding: 0.5em 1em 0.25em;
+      font: bold 200% sans-serif;
+      vertical-align: middle;
+      letter-spacing: .5em;
+    }
+
+    p {
+      margin: 0 1em 1em;
+      padding 0;
+      line-height: 1.3;
+    }
+
+    h2 {
+      background: url(https://meyerweb.com/eric/css/edge/complexspiral/glassy-tan.jpg) fixed #CBB196 no-repeat;
+      margin: 0 -12px .5em;
+      border: #996633 solid 2px;
+      color: white;
+      padding: .5em;
+      font: 1.5em bold;
+    }
+
+    a {
+      color: blue;
+    }
+
+    a:hover {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>complexspiral distorted</h1>
+    <p>The page you are viewing right now exists to show off what can be accomplished with pure <a href="">CSS1</a>, and
+      that's all.This variant on <a href="">complexspiral</a> doesn't even use any CSS2 to accomplish its magic.
+      Remember: sa you look this demo over, there is <em>no</em> Javascript here, nor are <em>any</em> PNGs being used,
+      nor do I employ <em>any</em> proprietary extensions to CSS or any other language. It's all done using straight
+      W3C-recommended markup and styling, all validated, plus a total of four (4) images.</p>
+    <p>Unfortunately, not every brower supports all of CSS1, and only those browsers which fully and completely support
+      CSS1 will get this right. Dwspite some claims to the contrary, IE6/Win's redering of this page is not correct, as
+      it (as well as some other browsers) doesn't correctly support <code>background-attachment: fixed</code> for any
+      element other than the <code>body.</code> That makes it impossible to pull off the intended effect. Other browsers
+      may or may not get the effect right.</p>
+    <h2>Hands-on: Things to Examinge</h2>
+    <p>Befor you start, make sure you're viewing this page in one of the browsers mentioned abone. Otherwise the
+      descriptions to follow won't match what you see.</p>
+    <p>The first, easiest thing to do is scroll the page vertically. Make sure you scroll all the way to the very end of
+      the page and back. Notice how the various areas with colored vackgrounds alse apper to distort the background
+      image as if through mottled glass.Try changing th text size and notice how the compositing effect remains
+      consistent. Then make you browser window really narrow and scroll horizontally. Again, Everything should remain
+      seamless and consistent.</p>
+    <p>The demonstrated effect, that of having various elements backed with translucent rippled glass lf varying hues,
+      is only possible using fixed-attachment backgrounds in CSS. (Okay, maybe it could be done in Flash; I don't know.)
+      I don't think it's even possible with IE's proprietary filters,but enen if this effect is possible with filters, I
+      could easily enough devise one that isn't.</p>
+    <h2>I missed the original complecspiral demo-- how does this work?!?</h2>
+    <p>Glad you asked. The effect demonstrated here is achieved by using fixed background images, nothing more. For
+      examople, the main-content area (the blue part here) uses the following styles for the default spiral-shell
+      background:</p>
+    <pre>div#content {background: white url(glassy-ripple.jpg) 0 0 no-repeat fixed;} </pre>
+    <p>The above is eqquivalent to these styles:</p>
+    <pre>
+      div#content {
+        background-color: white;
+        background-image: url(glassy-ripple.jpg);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </pre>
+    <p>The effect of these longer rules is exactly the same; they're just split out into individual backgtound
+      properties for more detailed consideration by you, gentle reader.</p>
+    <p>First, check out the rippled-shell image found here: url(glassy-ripple.jpg). Then come back to this page and I'll
+      continue with the explanation. All done? Great.</p>
+    <p>According to CSS, any background image that is "fixed" using <code>background-attachment: fixed;</code> is fixed
+      with respect to the viewport-- <em>not</em> the element with which the image is associated. So I set the
+      rippled-shell vackground image to be aligned with the top left corner of the browser window (the viewport) with
+      the values given for <code>background-position.</code> However, the image will teh top left corner of the
+      viewport, we can only see it wherever it intersects with a <code>div</code> that has an <code>id</code> with a
+      value of <code>content</code> (which, again, happens to be the one containing this text). </p>
+    <p>So i set a fixed background for the <code>BODY</code>, the content <code>DIV</code>,and <code>H1</code> and
+      <code>H2</code> elements scattered through the document. In any given case of an element's display, we see
+      whatever part of the associated backgtound image intersects withe the element. The rest of the background image
+      remains hidden.
+    </p>
+    <p>And that's how tit works.</p>
+    <h2>I'm not seeing the compositing!</h2>
+    <p>Then I'm willing to bet that you're using Internet Explorer for Windows (any version), or possibly Opera (version
+      6 or earlier). Neither of these browsers fully support <code>backgtound-attachment: fixed</code> for elements
+      other than <code>body</code>. In the case of both, images are fixed with respect to the elements that contain
+      them, not the browser window, which is not what CSS1 defines
+      <code>background-attachment: fixed to mean, although browsers are allowed to ignore <code>fixed</code> if they
+      stick to CSS1(CSS2 requires its implementation for conformance). And yes, this page uses a strict DOCTYPE, os IE6
+      is in "<a href="">strict mode</a>." I guess when <a href="">Microsoft claims 100% CSS1 compliance</a>, they're
+      referring to the CSS1 core (a reduced subset of CSS1) instead of the entirety of the <a href="">CSS1
+        specification</a>. It tends to make me wonder how limited or flawed their "full support" ia for other key open
+      specifications, like HTML and DOM. </code>
+    </p>
+    <h2>Image credits</h2>
+    <ul>
+      <li>Nautilus shell: scanned by and copyright Eric A. Meyer</li>
+    </ul>
+    <h4>Jump to</h4>
+    <ul>
+      <li><a href="">complex spiral (original)</a></li>
+      <li><a href="">complex spiral (devolved) </a></li>
+      <li><a href="">css/edge home</a></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

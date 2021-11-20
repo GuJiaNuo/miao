@@ -7,140 +7,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    html,
+    body {
+      font-size: 0;
+      height: 100%;
+      width: 100%;
+    }
+
     * {
-      xoverflow: hidden;
       margin: 0px;
-      box-sizing: border-box;
-      vertical-align: top;
+      font-size: 16px;
     }
 
-    div:nth-child(n+2) {
-      margin: 0 0 0 -5px;
-    }
-
-    div.top {
-      display: inline-block;
+    header {
       height: 100px;
-      width: calc(100vw - 600px);
       background-color: cadetblue;
-      border: 1px solid black;
     }
 
-    div.side {
-      width: 193px;
-      height: 100vh;
-      background-color: gray;
+    aside {
+      width: 200px;
+      height: calc(100% - 100px);
+      background-color: orange;
       overflow: auto;
-      display: inline-block;
-      border: 1px solid black;
     }
 
-    div.main {
-      display: inline-block;
-      width: calc(100vw - 601px);
-      height: calc(100vh - 100px);
+    main {
+      width: calc(100% - 200px);
+      height: calc(100% - 100px);
       background-color: yellow;
       overflow: auto;
-      margin-left: 193px;
-      margin-top: calc(100px - 100vh);
-    }
-
-    button {
-      width: 30px;
-      height: 22px;
-    }
-
-    input {
-      width: 130px;
-    }
-
-    li:hover {
-      background-color: blue;
+      margin: calc(100px - 100vh) -200px 0 200px;
     }
   </style>
 </head>
 
 <body>
-  <div class=side>
-    <h2>OALD Se7en</h2>
-    <input type="text" name="" id=""> <button></button>
+  <header></header>
+  <aside>
     <ul>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
-      <li>word</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
+      <li>Lorem, ipsum.</li>
     </ul>
-  </div>
-  <div class=top></div>
-  <div class="side">
-    <h2>Vocabulary</h2>
-  </div>
-  <div class="side">
-    <h2>History</h2>
-  </div>
-  <div class=main>
+  </aside>
+  <main>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, minus laudantium. Commodi nesciunt sapiente
     pariatur doloremque blanditiis sint ducimus vitae nobis, asperiores reprehenderit officia quam ratione facere
     porro? Iusto officia optio ex a nostrum maxime sint dignissimos eum voluptatem nemo nobis, minus minima distinctio
@@ -210,7 +183,7 @@
     inventore quaerat aut ex ratione veniam quas! Quidem libero asperiores sint impedit deleniti consectetur atque
     dicta numquam pariatur soluta porro, nihil quos. Corrupti repellendus ab, placeat eligendi ad saepe voluptas eaque
     asperiores temporibus iure. Obcaecati itaque sint, ipsam ducimus quae reprehenderit?
-  </div>
+  </main>
 </body>
 
 </html>
