@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    * {
+      xbackground-color: rgba(0, 0, 0, 0.08);
+    }
+
+    label {
+      box-shadow: 0 0 5px gray;
+      display: block;
+      position: relative;
+      width: 250px;
+      height: 120px;
+      border-radius: 75px;
+      background-color: green;
+    }
+
+    div {
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      background-color: white;
+      top: 60px;
+      left: 125px;
+      transition: 1s;
+    }
+
+    span {
+      box-shadow: 0 0 5px 5px gray;
+      display: inline-block;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      background-color: white;
+      top: 10px;
+      left: 10px;
+      transition: 1s;
+      border: gray;
+    }
+
+    input:checked+label div {
+      background-color: white;
+      width: 250px;
+      height: 120px;
+      border-radius: 75px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    input:checked+label span {
+      position: absolute;
+      top: 10px;
+      left: 140px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" name="" id="ios" hidden>
+  <label for=ios>
+    <div></div>
+    <span></span>
+  </label>
+</body>
+
+</html>

@@ -16,23 +16,26 @@
       transition: 2s steps(28, start);
     }
 
-    section {
+    label {
+      display: block;
       width: 100px;
       height: 100px;
       background-image: url(web_heart_animation.png);
     }
 
-    section:focus {
+    input:checked + label{
       background: url(web_heart_animation.png) -2800px 0px;
       transition: 2s steps(28, start);
-
     }
+
+
   </style>
 </head>
 
 <body>
   <div tabindex="1"><img src="web_heart_animation.png" alt=""></div>
-  <section tabindex="1"></section>
+  <input type="checkbox" name="" id="heart" hidden>
+  <label for="heart"></label>
 </body>
 
 </html>
