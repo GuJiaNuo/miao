@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body,
+    html {
+      width: 100%;
+    }
+
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .table thead {
+      border-bottom: 3px solid;
+    }
+
+    .table td,
+    .table th {
+      text-align: left;
+      border-bottom: gray 1px solid;
+      padding: 0.5em 3em 0.5em 0.5em;
+    }
+
+    table.table-dark {
+      background-color: black;
+      color: white;
+    }
+
+    .table-striped tbody tr:nth-child(2n+1) {
+      background-color: #ECECEC;
+    }
+
+    .table-dark.table-striped tbody tr:nth-child(2n+1) {
+      background-color: #333333;
+    }
+
+    .table-dark.table-hover tbody tr:hover {
+      background-color: #555;
+    }
+
+    .table-bordered th,
+    .table-bordered td {
+      border-left: gray 1px solid;
+      border-right: gray 1px solid;
+    }
+
+    .table-borderless thead {
+      border-bottom: solid 1px;
+    }
+
+    table.table-sm th,
+    table.table-xm td {
+      padding: .25em;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="table table-dark table-striped table-hover table-bordered table-borderless table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

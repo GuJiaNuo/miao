@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    dd {
+      display: inline-block;
+      float: left;
+    }
+
+    dt {
+      float: left;
+      clear: left;
+    }
+
+    dt+dd {
+      margin-left: 1em;
+    }
+
+    dd::after {
+      content: "/";
+      margin-left: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <dl>
+    <dt>导演</dt>
+    <dd>director1</dd>
+    <dd>director2</dd>
+    <dt>主演</dt>
+    <dd>actor01</dd>
+    <dd>actor02</dd>
+    <dd>actor03</dd>
+    <dd>actor04</dd>
+    <dt>参演</dt>
+    <dd>actor05</dd>
+    <dd>actor06</dd>
+    <dd>actor07</dd>
+    <dd>actor08</dd>
+    <dd>actor09</dd>
+    <dd>actor10</dd>
+    <dd>actor11</dd>
+    <dd>actor12</dd>
+  </dl>
+</body>
+
+</html>
