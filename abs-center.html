@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div.position {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      border: black solid;
+    }
+
+    .position img {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    div.inline {
+      width: 500px;
+      height: 500px;
+      border: black solid;
+      text-align: center;
+      line-height: 500px;
+      font-size: 0;
+    }
+
+    .inline img {
+      max-width: 100%;
+      max-height: 100%;
+      vertical-align: middle;
+    }
+
+    div.table {
+      display: table-cell;
+      text-align: center;
+      width: 500px;
+      height: 500px;
+      border: solid black 1px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="table"><img src="./image/baq.gif" alt=""></div>
+  <div class="position"><img src="./image/high.gif" alt=""></div>
+  <div class="inline"><img src="./image/wide.gif" alt=""></div>
+</body>
+
+</html>
