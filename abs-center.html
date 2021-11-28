@@ -43,16 +43,38 @@
       text-align: center;
       width: 500px;
       height: 500px;
-      border: solid black 1px;
+      border: solid black ;
       vertical-align: middle;
+    }
+
+    .background{
+      width: 500px;
+      height: 500px;
+      border: solid black ;
+      background: url(./image/high.gif) center no-repeat;
+      background-size: contain;
+    }
+
+    .object img{
+      height:500px;
+      width: 500px;
+      object-fit: scale-down;
+      border: black solid;
     }
   </style>
 </head>
 
 <body>
+  表布局：
   <div class="table"><img src="./image/baq.gif" alt=""></div>
+  定位布局
   <div class="position"><img src="./image/high.gif" alt=""></div>
+  行内布局
   <div class="inline"><img src="./image/wide.gif" alt=""></div>
+  css sprite
+  <div class="background"></div>
+  object-fit
+  <div class="object"><img src="./image/high.gif" alt=""></div>
 </body>
 
 </html>
