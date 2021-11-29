@@ -76,18 +76,27 @@
     .productTop {
       width: 1225px;
       margin: auto;
+      vertical-align: middle;
       >a:first-child img{
         height: 56px;
         width: 56px;
+        margin-top: 22px;
       }
       div {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
         li {
-        >ul{
-          display: none;
+          display: inline-block;
+          >ul{
+            display: none;
+          }
         }
-      }
+        >ul {
+          vertical-align: top;
+          display: inline-block;
+          line-height: 88px;
+          >li{height: ;}
+        }
       }
 
     }
