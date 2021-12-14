@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <style>
-    div {
+    div.position {
       width: 500px;
       height: 500px;
       position: relative;
       border: black solid;
     }
 
-    img {
+    .position img {
       position: absolute;
       max-width: 100%;
       max-height: 100%;
@@ -23,7 +23,7 @@
       margin: auto;
     }
 
-    xdiv {
+    div.inline {
       width: 500px;
       height: 500px;
       border: black solid;
@@ -32,18 +32,84 @@
       font-size: 0;
     }
 
-    ximg {
+    .inline img {
       max-width: 100%;
       max-height: 100%;
       vertical-align: middle;
+    }
+
+    div.table {
+      display: table-cell;
+      text-align: center;
+      width: 500px;
+      height: 500px;
+      border: solid black ;
+      vertical-align: middle;
+    }
+
+    .background{
+      width: 500px;
+      height: 500px;
+      border: solid black ;
+      background: url(./image/high.gif) center no-repeat;
+      background-size: contain;
+    }
+
+    .object img{
+      height:500px;
+      width: 500px;
+      object-fit: scale-down;
+      border: black solid;
+    }
+
+    .flex {
+      width: 500px;
+      height: 500px;
+      border: solid black ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flex img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    div.position-transform {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      border: black solid;
+    }
+
+    .position-transform img {
+      position: absolute;
+      max-width: 100%;
+      max-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   </style>
 </head>
 
 <body>
-  <div><img src="./image/high.gif" alt=""></div>
-  <div><img src="./image/wide.gif" alt=""></div>
-  <div><img src="https://www.12306.cn/index/images/download.png" alt=""></div>
+  表布局：
+  <div class="table"><img src="./image/baq.gif" alt=""></div>
+  定位布局
+  <div class="position"><img src="./image/high.gif" alt=""></div>
+  行内布局
+  <div class="inline"><img src="./image/wide.gif" alt=""></div>
+  css sprite
+  <div class="background"></div>
+  object-fit
+  <div class="object"><img src="./image/high.gif" alt=""></div>
+  flex
+  <div class="flex"><img src="./image/wide.gif" alt=""></div>
+  transform
+  <div class="position-transform"><img src="./image/baq.gif" alt=""></div>
+
 </body>
 
 </html>
