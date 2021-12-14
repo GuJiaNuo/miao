@@ -20,7 +20,7 @@
   var a = parseInt(prompt('a'))
   var b = parseInt(prompt('b'))
   var c = parseInt(prompt('c'))
-  console.log((a + b) / c)
+  console.log(Math.trunc((a + b) / c))
 
 </script>
 
@@ -28,7 +28,7 @@
 
   var a = parseInt(prompt('a'))
   var b = parseInt(prompt('b'))
-  console.log(a / b, a % b)
+  console.log(Math.trunc(a / b), a % b)
 
 </script>
 
@@ -36,7 +36,7 @@
 
   var a = parseInt(prompt('a'))
   var b = parseInt(prompt('b'))
-  console.log(a / b)
+  console.log((a / b).toFixed(9))
 
 </script>
 
@@ -44,7 +44,7 @@
 
   var a = parseInt(prompt('a'))
   var b = parseInt(prompt('b'))
-  console.log(b / a * 100 + "%")
+  console.log((b / a * 100).toFixed(3) + "%")
 
 </script>
 
@@ -62,14 +62,14 @@
 <script id="ch0103/08">
 
   var f = Number(prompt('F'))
-  console.log(5 * (f - 32) / 9)
+  console.log((5 * (f - 32) / 9).toFixed(5))
 
 </script>
 
 <script id="ch0103/09">
 
   var r = Number(prompt('r'))
-  console.log(2 * r, 2 * Math.PI * r, Math.PI * Math.pow(r, 2))
+  console.log((2 * r).toFixed(4), (2 * Math.PI * r).toFixed(4), (Math.PI * Math.pow(r, 2)).toFixed(4))
 
 </script>
 
@@ -77,7 +77,7 @@
 
   var r1 = Number(prompt('r1'))
   var r2 = Number(prompt('r2'))
-  console.log(1 / (1 / r1 + 1 / r2))
+  console.log((1 / (1 / r1 + 1 / r2)).toFixed(2))
 
 </script>
 
@@ -85,14 +85,14 @@
 
   var a = Number(prompt('a'))
   var b = Number(prompt('b'))
-  console.log(a % b)
+  console.log((a % b).toFixed(4))
 
 </script>
 
 <script id="ch0103/12">
 
   var r = Number(prompt('r'))
-  console.log(4 / 3 * 3.14 * Math.pow(r, 3))
+  console.log((4 / 3 * 3.14 * Math.pow(r, 3)).toFixed(2))
 
 </script>
 
@@ -102,7 +102,7 @@
   var n1 = n % 10
   var n2 = (n - n1) % 100
   var n3 = Math.trunc(n / 100)
-  console.log(n3 + n2 + n1 * 100)
+  console.log(" n3 + n2 + n1 * 100 ")
 
 </script>
 
@@ -130,7 +130,7 @@
   var ya = Number(prompt('ya'))
   var xb = Number(prompt('xb'))
   var yb = Number(prompt('yb'))
-  console.log(Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2)))
+  console.log(Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2)).toFixed(3))
 
 </script>
 
