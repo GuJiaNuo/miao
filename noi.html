@@ -99,10 +99,11 @@
 <script id="ch0103/13">
 
   var n = Number(prompt('n'))
-  var n1 = n % 10
-  var n2 = (n - n1) / 10 % 10
+  var n1 = (n % 10) == 0 ? "0" : (Math.trunc(n / 100))
+  var n2 = ((n - n1) / 10 % 10) == 0 ? "0" : ((n - n1) / 10 % 10)
   var n3 = Math.trunc(n / 100)
-  console.log(String(n3) + String(n2) + String(n1))
+  var x = (n2 == "0" || n1 == "0") ? (n1 + n2 + n3) : (n1 * 100 + n2 * 10 + n3)
+  console.log(x)
 
 </script>
 
@@ -169,3 +170,4 @@
   console.log(Math.pow(2, n))
 
 </script>
+
