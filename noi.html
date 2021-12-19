@@ -744,10 +744,11 @@
 
   var N = Number(prompt("N"))
   var n
-  if (N % 2 == 1)
+  if (N % 2 == 1) {
     n = N * 3 + 1
-  console.log(N + "*3+1=" + n)
-  N = n
+    console.log(N + "*3+1=" + n)
+    N = n
+  }
   if (N % 2 == 0) {
     while (N / 2 >= 1) {
       n = N / 2
@@ -826,7 +827,7 @@
 <script xtype="xx" id="ch0105/25">
 
   var sep = 0
-  var nov = 100
+  var nov = 300
   var dec9, dec7, n1, n2, n3
 
   do {
@@ -923,9 +924,9 @@
         flag++
     }
     if (flag == k)
-      console.log("Yes")
+      console.log("YES")
     else
-      console.log("No")
+      console.log("NO")
   }
 
 </script>
@@ -1047,10 +1048,11 @@
       m = m + N
     else {
       N = N + Math.trunc((M + r) / N)
-      r = M % N
+      r = (M + r) % N
       m = 0
     }
   }
+  console.log(N)
 
   // while (m < M) {
   //   m = m + N
@@ -1153,7 +1155,7 @@
       if (pad == 0) {
         console.log(border + (" ").repeat(col - 2) + border)
       } else
-        console.log(border + ("1").repeat(col - 2) + border)
+        console.log(border.repeat(col))
     }
   }
 
@@ -1177,13 +1179,14 @@
 <script xtype="xx" id="ch0105/44">
 
   var n = Number(prompt("n"))
-  var num = 2, i = 0
+  var num = 1, i = 0
 
   while (i < n) {
+    num++
     if (num == 2 || num == 3 || num == 5 || num == 7 || num % 2 != 0 && num % 3 != 0 && num % 5 != 0 && n % 7)
       i++
-    num++
   }
+  console.log(num)
 
 </script>
 
