@@ -1,4 +1,4 @@
-var GuJiaNuo = {
+var gujianuo = {
   chunk: function (array, size = 1) {
     let a = Array(Math.trunc(array.length / size))
     for (let i = 0, j = 0, k = 0; i < array.length; i++) {
