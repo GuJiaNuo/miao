@@ -32,10 +32,14 @@ var gujianuo = {
     return a
   },
 
-  difference: function (array, values) {
+  difference: function (array, ...values) {
     let a = []
+    let b = []
+    for (let i = 0; i < values.length; i++) {
+      b.push(...values[i])
+    }
     array.forEach(element => {
-      if (!values.includes(element))
+      if (!b.includes(element))
         a.push(element)
     })
     return a
