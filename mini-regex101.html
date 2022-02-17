@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mini-regex101</title>
+  <style>
+    textarea, pre {
+      height: 100px;
+      width: 500px;
+      font-size: 10px;
+      line-height: 1.3em;
+    }
+    strong {
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <div>REGULAR EXPRESSION</div>
+  <input type="text" id="regin" oninput="run()">
+  <div>
+    <label >g<input type="checkbox" id="reFglobal"></label>
+    <label >m<input type="checkbox" id="reFmulti"></label>
+    <label >i<input type="checkbox" id="reFinsensitive"></label>
+    <label >s<input type="checkbox" id="reFdotAll"></label>
+    <label >u<input type="checkbox" id="reFunicode"></label>
+    <label >d<input type="checkbox" id="reFhasIndices"></label>
+  </div>
+  <div>TEST STRING</div>
+  <textarea id="stringin"  oninput="run()"></textarea>
+  <pre contenteditable id="resultShow"></pre>
+  <script>
+    function run() {
+      let regstr = regin.value
+      let regFlags = getFlags()
+      let str = stringin.value
+
+      if (str.length == 0) {
+        resultShow.innerHTML = stringin + '\n'
+        return
+      }
+      try {
+        var reg = new RegExp(regstr, regFlags)
+      } catch (e) {
+        if (e instanceof SyntaxError) {
+          resultShow.innerHTML = stringin + '\n'
+          return
+        } else
+          throw e
+      }
+
+      let resultout = ""
+      let startIndex = 0
+      let match
+
+      while(match = reg.exec(str)) {
+        resultout += str.slice(startIndex, match.index) + "<strong>" + match[0] + "</strong>"
+        startIndex = reg.lastIndex
+        if (match[0].length == 0) startIndex++
+        if (!reg.global) break
+      }
+      resultout += str.slice(startIndex)
+      resultShow.innerHTML = resultout + "\n"
+    }
+
+
+    function getFlags() {
+      let flags = ""
+      if (reFglobal.checked) flags += "g"
+      if (reFmulti.checked) flags += 'm'
+      if (reFinsensitive.checked) flags += 'i'
+      if (reFdotAll.checked) flags += 's'
+      if (reFunicode.checked) flags += 'u'
+      if (reFhasIndices.checked) flags += 'd'
+      return flags
+    }
+
+  </script>
+</body>
+</html>
